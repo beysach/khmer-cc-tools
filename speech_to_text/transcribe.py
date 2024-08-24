@@ -42,8 +42,10 @@ def transcribe_audio(input_audio_file):
         text = recognizer.recognize_google(audio_data, language="km-KH")
         return text, input_audio_file
     except sr.UnknownValueError:
+        raise gradio.Error("Speech recognition could not understand audio 💥!", duration=5)
         return "Speech recognition could not understand audio"
     except sr.RequestError as e:
+        raise gradio.Error(f"Could not request results from Google Speech Recognition service; {e}", duration=5)
         return f"Could not request results from Google Speech Recognition service; {e}"
 
 
