@@ -5,7 +5,7 @@ from khmer_force_aligner import create_srt
 from datetime import datetime
 
 def download_srt(cc_text: str):
-      # Get the current date and time
+    # Get the current date and time
     now = datetime.now()
     # Format it as 'YYYYMMDD_HHMMSS'
     timestamp = now.strftime("%Y%m%d_%H%M%S")

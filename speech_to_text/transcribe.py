@@ -7,7 +7,7 @@ import gradio as gr
 
 
 def generate_output_filename(input_filename):
-    base_name = os.path.splitext(input_filename)[0]  # Get the base name without extension
+    base_name = os.path.splitext(os.path.basename(input_filename))[0]  # Get the base name without extension
     output_filename = f"{base_name}_converted.wav"   # Append '_converted.wav'
     return output_filename
 
