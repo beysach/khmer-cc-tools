@@ -35,8 +35,7 @@ def render_ui():
                     download_button = gr.DownloadButton(
                         label="ទាញយក SRT", 
                         value=download_srt, 
-                        inputs=cc_text,
-                        outputs=None
+                        inputs=cc_text
                     )
 
                     
