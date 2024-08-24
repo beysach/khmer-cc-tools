@@ -34,7 +34,7 @@ def render_ui():
                 # with gr.Column():
                 #     video = gr.Video()
                 # but0.click(fn=text_to_speech_ai, inputs=[model, text, speaker], outputs=[audio])
-    app.queue().launch(server_name="0.0.0.0", server_port=7861)
+    app.queue().launch(share=True)
 
 
 if __name__ == '__main__':
